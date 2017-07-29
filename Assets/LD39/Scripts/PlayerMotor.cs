@@ -52,7 +52,7 @@ public class PlayerMotor : MonoBehaviour {
         m_IsAttacking = true;
         rb2d.velocity = (m_IsFacingRight ? Vector3.right : Vector3.left) * m_DashSpeed;
 
-        Invoke("ResetCooldown", .1f);
+        Invoke("ResetCooldown", .05f);
     }
 
     private void ResetCooldown() {
