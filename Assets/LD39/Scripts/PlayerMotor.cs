@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour {
     private Rigidbody2D rb2d;
 
+    [SerializeField] private float m_MinSpeedX = 5f;
     [SerializeField] private float m_MaxSpeedX = 10f;
     [SerializeField] private float m_MaxSpeedY = 6f;
     [SerializeField] private int m_MaxHealth = 20;
@@ -28,7 +29,9 @@ public class PlayerMotor : MonoBehaviour {
     public void Move(float moveX, float moveY) {
         if (m_IsAttacking) return;
 
-        rb2d.velocity = new Vector2(moveX * m_MaxSpeedX, moveY * m_MaxSpeedY);
+        rb2d.AddForce(new Vector2(
+            (moveX * m_MaxSpeedX) +
+            ((m_IsFacingRight ? 1f : -1f) * m_MinSpeedX), moveY * m_MaxSpeedY) * Time.deltaTime, ForceMode2D.Impulse);
 
         if (moveX > 0 && !m_IsFacingRight) {
             Flip();
@@ -50,9 +53,9 @@ public class PlayerMotor : MonoBehaviour {
         if (m_IsAttacking) return;
 
         m_IsAttacking = true;
-        rb2d.velocity = (m_IsFacingRight ? Vector3.right : Vector3.left) * m_DashSpeed;
+        rb2d.AddForce((m_IsFacingRight ? Vector3.right : Vector3.left) * m_DashSpeed, ForceMode2D.Impulse);
 
-        Invoke("ResetCooldown", .05f);
+        Invoke("ResetCooldown", .5f);
     }
 
     private void ResetCooldown() {
