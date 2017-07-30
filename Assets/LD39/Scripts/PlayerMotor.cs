@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class PlayerMotor : MonoBehaviour {
     private Rigidbody2D rb2d;
+    private AudioSource audioSource;
 
     [SerializeField] private float m_MinSpeedX = 5f;
     [SerializeField] private float m_MaxSpeedX = 10f;
@@ -16,8 +18,11 @@ public class PlayerMotor : MonoBehaviour {
     private bool m_IsAttacking = false;
     [SerializeField] private float m_DashSpeed = 50f;
 
+    [SerializeField] private AudioClip hitSfx;
+
     void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
 
         Reset();
     }
@@ -63,6 +68,9 @@ public class PlayerMotor : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.transform.tag == "Enemy") {
             Debug.Log("Hit!  Impact speed = " + other.relativeVelocity.magnitude);
+            audioSource.clip = hitSfx;
+            audioSource.pitch = Random.Range(0.95f, 1.05f);
+            audioSource.Play();
         }
     }
 }
