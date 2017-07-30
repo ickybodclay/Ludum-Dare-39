@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 212810960755277780}
   - component: {fileID: 50965408974554680}
   - component: {fileID: 70499419766401856}
+  - component: {fileID: 114157345738845836}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +201,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Time: 0.5
   m_Parameters:
     serializedVersion: 2
@@ -285,7 +286,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Time: 0.5
   m_Parameters:
     serializedVersion: 2
@@ -338,6 +339,21 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114157345738845836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337369679040994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59376db4de33bbb4c8492e0b3b6e1cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxSpeedX: 10
+  m_MaxSpeedY: 3
+  m_MaxHealth: 20
+  m_DashSpeed: 30
 --- !u!198 &198195554451163368
 ParticleSystem:
   m_ObjectHideFlags: 1
