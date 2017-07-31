@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 8af0b5a8e2920184591ccf09d2bd9f5b
-timeCreated: 1501349090
+guid: bacba5ba11bb01d429a086200ba943d1
+timeCreated: 1501455193
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: carman_0
+  fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -46,7 +45,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -82,21 +81,7 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: carman_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 8
-        width: 100
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 

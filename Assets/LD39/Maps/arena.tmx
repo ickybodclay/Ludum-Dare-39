@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="40" height="23" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" source="Terrain.tsx"/>
+ <layer name="Tile Layer 1" width="40" height="23">
+  <properties>
+   <property name="unity:sortingOrder" type="int" value="-100"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzrEJACAMRNE4b8CBMooEZ7NJZSNBkIC/+N3BPWsiVrhBV3XJNSOP5mHv296Tf5rcv0zx4cOHD1/J8OHDh+93X+UW3yKsqA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="40" height="23">
+  <properties>
+   <property name="unity:sortingOrder" type="int" value="-99"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYCAdODIxMDgBsTMTbdRTChKB9iQBcTKR9pGqnlLQCLSnCYibsdh3hET1hMAtRuJxDVT9QqA9i4B4MROEX4dkzhMG0tQTwrlAtTuB+nYR4bc5QDwXC55HJfXIYC/QPfkMEPfdBPmLTmmDWHAXyX2DFYy6jzIw6j7KwKj7KAOj7qMMjLqPMjDqPsrAUHHf3kHWttoNdM8epPbV3UHmvttA99yBuq8XiPsGKe4HYgCsYV8q
+  </data>
+ </layer>
+</map>
